@@ -7,7 +7,7 @@ public class AdventSolver {
     public static void main(String[] args) {
         int[] fileData = getFileData("src/InputFile");
         AdventDay a = new AdventDay(fileData);
-        a.getRepeats();
+        a.getMedian();
         System.out.println(a.fuel());
     }
 
