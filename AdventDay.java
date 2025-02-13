@@ -32,7 +32,6 @@ public class AdventDay {
     // AND EVERY OTHER NUMBER IN THE LIST, THEN ADD THE DIFFERENCE AND RETURN IT
     public int fuel(){
         int leastFuel = 0;
-
         for (int i = 0; i < position.length; i++){
             leastFuel += Math.abs(position[i] - repeated);
         }

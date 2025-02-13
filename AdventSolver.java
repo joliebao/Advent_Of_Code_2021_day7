@@ -6,7 +6,9 @@ import java.util.Scanner;
 public class AdventSolver {
     public static void main(String[] args) {
         int[] fileData = getFileData("src/InputFile");
-        // you now have a list of Strings from the file "InputFile"
+        AdventDay a = new AdventDay(fileData);
+        a.getRepeats();
+        System.out.println(a.fuel());
     }
 
     public static int[] getFileData(String fileName) {
