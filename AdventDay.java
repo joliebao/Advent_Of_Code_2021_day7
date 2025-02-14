@@ -3,7 +3,6 @@ import java.util.ArrayList;
 
 public class AdventDay {
     private int[] position;
-    private ArrayList<Integer> possibilities = new ArrayList<Integer>();
     private int median;
 
     public AdventDay(int[] data){
@@ -21,7 +20,6 @@ public class AdventDay {
         return median;
     }
 
-    // Part 2 - - - -- -
     // THIS METHOD SHOULD FIND THE DIFFERENCE BETWEEN THE REPEATED NUMBER
     // AND EVERY OTHER NUMBER IN THE LIST, THEN ADD THE DIFFERENCE AND RETURN IT
     public int fuel(){
@@ -30,5 +28,16 @@ public class AdventDay {
             leastFuel += Math.abs(position[i] - median);
         }
         return leastFuel;
+    }
+
+    // Part 2 - - - -- -
+    public int difficultFuel(){
+        int leastFuelComplicated = 0;
+        for (int each : position){
+            for (int j = 0; j < Math.abs(each - median); j++) {
+                leastFuelComplicated += j;
+            }
+        }
+        return leastFuelComplicated;
     }
 }

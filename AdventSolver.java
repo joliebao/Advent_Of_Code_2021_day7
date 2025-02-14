@@ -9,6 +9,7 @@ public class AdventSolver {
         AdventDay a = new AdventDay(fileData);
         a.getMedian();
         System.out.println(a.fuel());
+        System.out.println(a.difficultFuel());
     }
 
     public static int[] getFileData(String fileName) {
